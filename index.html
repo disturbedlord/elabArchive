@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Elab Archive</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body onload="fun_c()" id = "body">
+    
+    <div class = "lang_select">
+        <div class = "txt1">
+            <p>// Select Programming Language //</p>
+        </div>
+        
+        <div class = "lang_btn">
+            <button class = "C" onclick="fun_c()" id = "c">C</button>
+            <button class = "Cpp" onclick="fun_cpp()" id = "cpp">C++</button>
+            <button class = "JAVA" onclick="fun_java()" id = "java">JAVA</button>
+            <button class = "DATA_STRUCTURE" onclick="fun_data_structure()" id = "ds">DATA STRUCTURE</button>
+        </div>
+        
+    </div>
+    
+<!--    search_bar DIV   -->
+    <div class = "search_bar">
+          <input type="text" name="questionNo" class="search_bar_txt" placeholder="Question No." id = "q_no"><br>
+          
+        <button class = "code_btn" id = "code_btn" onclick="fetch_data()">Get Code</button>
+        
+<!--    computing o/p    -->
+        <div class = "error" id = "error">
+
+            <p class="opResult" id = "opResult"></p>
+
+        </div>
+    </div>
+<!--
+    <div class = "popup" id = "popup">
+    
+    <p class = "popup_txt">It Seems You have changed the browser Resolution<br>Please Maximize the Browser Window</p>
+   
+    </div>
+-->
+    
+<!--    popup output Files -->
+    <div class= "outputContent" id = "opContent">
+    <span class="close">&times;</span>
+        <p id = "op_q_no" class="op_q_no"></p>
+        <div class="opFiles" id = "opFiles">
+            
+        </div>
+    
+    </div>
+
+        
+       
+        
+<!--    footer Part-->
+    
+    <div class = "footer">
+    
+        <p class = "brand_name">#Anon</p>
+    
+    </div>
+    
+<!-- Firebase Connection Section Start  -->
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyADrXCieFXtj37rGZaIq4xT3DnojgdQirk",
+    authDomain: "elab-aa321.firebaseapp.com",
+    databaseURL: "https://elab-aa321.firebaseio.com",
+    projectId: "elab-aa321",
+    storageBucket: "elab-aa321.appspot.com",
+    messagingSenderId: "377492592628",
+    appId: "1:377492592628:web:db095783592302d2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+<!-- Firebase Connection Section End   -->
+    <script src = "script.js"></script>
+    <script src = "script2.js"></script>
+</body>
+    
+</html>
